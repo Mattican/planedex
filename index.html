@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planedex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <div id="notification" class="notification" hidden></div>
+        <header class="app-header">
+    <div class="plane-icon">✈️</div>
+
+    <div>
+        <h1>Planedex</h1>
+        <p>A very serious record of planes that are cool and not for nerds.</p>
+    </div>
+</header>
+
+    <section class="kpi-section">
+    <div class="stats">
+        <div class="stat-card">
+            <strong id="sighting-count">0</strong>
+            <span>Planes spotted</span>
+        </div>
+
+        <div class="stat-card">
+            <strong id="airline-count">0</strong>
+            <span>Airlines</span>
+        </div>
+
+        <div class="stat-card">
+            <strong id="type-count">0</strong>
+            <span>Aircraft types</span>
+        </div>
+    </div>
+</section>
+
+        <button id="add-sighting" class="primary-button">
+    ✈️ Log a new sighting
+</button>
+
+        <section id="sighting-form" hidden>
+            <h2>New sighting</h2>
+
+            <label>
+                Airline
+                <input id="airline" type="text" placeholder="e.g. Thai Airways">
+            </label>
+
+            <label>
+                Aircraft type
+                <input id="aircraft-type" type="text" placeholder="e.g. Boeing 787">
+            </label>
+
+            <label>
+                From
+                <input id="origin" type="text" placeholder="e.g. Bangkok">
+            </label>
+
+            <label>
+                To
+                <input id="destination" type="text" placeholder="e.g. London City">
+            </label>
+
+            <label>
+                Date spotted
+                 <input id="date" type="date">
+            </label>
+
+            <button id="save-sighting">
+                Save sighting
+            </button>
+        </section>
+ <section id="sightings">
+    <h2>Recent sightings</h2>
+</section>
+      
+<section class="collection-section">
+    <div class="collection-header">
+        <div>
+            <h2>🛩️ Aircraft collection</h2>
+            <p>Aircraft types discovered so far</p>
+        </div>
+    </div>
+
+    <div id="aircraft-collection" class="collection-grid"></div>
+</section>
+
+<section class="collection-section">
+    <div class="collection-header">
+        <div>
+            <h2>✈️ Airline collection</h2>
+            <p>Airlines discovered so far</p>
+        </div>
+    </div>
+
+    <div id="airline-collection" class="collection-grid"></div>
+</section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
